@@ -1,0 +1,71 @@
+import { useState } from "react";
+import { Mock } from "../../mock";
+import MapPage from "./page2";
+import { styled } from "styled-components";
+
+const Page1Q = () => {
+  const [content, setContent] = useState(Mock);
+  const ProductMore = () => {
+    alert("더보러가기~");
+  };
+
+  return (
+    <>
+      <div>
+        <Title>인기상품</Title>
+        <hr />
+        <GridContent>
+          {content.map((list, idx) => (
+            <MapPage key={idx} list={list} />
+          ))}
+        </GridContent>
+        <MoreBtn onClick={ProductMore}>더 많은 상품 보기</MoreBtn>
+      </div>
+      <div>
+        <Title>할인상품</Title>
+        <hr />
+        <GridContent>
+          {content.map((list, idx) => (
+            <MapPage key={idx} list={list} />
+          ))}
+        </GridContent>
+        <MoreBtn onClick={ProductMore}>더 많은 상품 보기</MoreBtn>
+      </div>
+      <div>
+        <Title>신상품</Title>
+        <hr />
+        <GridContent>
+          {content.map((list, idx) => (
+            <MapPage key={idx} list={list} />
+          ))}
+        </GridContent>
+        <MoreBtn onClick={ProductMore}>더 많은 상품 보기</MoreBtn>
+      </div>
+    </>
+  );
+};
+export default Page1Q;
+
+const GridContent = styled.div`
+  display: flex;
+`;
+
+const Title = styled.div`
+  font-size: larger;
+  font-weight: 800;
+  width: 100%;
+  line-height: 50px;
+  text-align: left;
+`;
+
+const MoreBtn = styled.button`
+  margin-top: 30px;
+`;
+
+/*
+1. 가독성이 좋지 않은 예시를 만들어보자.. 
+   1-1 반복되는 로직이 있는 경우 
+   => 보기에 많은 로직이 반복되며 가독성이 좋지 않다
+   1-2 변수나 함수의 명칭이 명확하지 않을 경우 
+   => onClick 함수일 경우 앞에 on을 붙여주거나 더 명확한 명칭으로 하도록 
+*/
