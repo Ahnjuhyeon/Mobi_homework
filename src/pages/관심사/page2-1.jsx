@@ -34,7 +34,7 @@ const Page2Q = () => {
 export default Page2Q;
 /*
 관심사 분리
-훅스로 .. 쓸 수 있게 
+훅스로 ..... 쓸 수 있게 
 useInput 은 왜 쓴거야 => e.target.value가 반복되니까!
 저 부분을 useInput으로 만들면!
 */
