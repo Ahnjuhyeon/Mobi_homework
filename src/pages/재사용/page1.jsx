@@ -3,7 +3,7 @@ import { Mock } from "../../mock";
 import MapPage from "./page2";
 import { styled } from "styled-components";
 
-const Page1Q = () => {
+const Page4Q = () => {
   const [content, setContent] = useState(Mock);
   const ProductMore = () => {
     alert("더보러가기~");
@@ -44,7 +44,7 @@ const Page1Q = () => {
     </>
   );
 };
-export default Page1Q;
+export default Page4Q;
 
 const GridContent = styled.div`
   display: flex;
@@ -63,9 +63,9 @@ const MoreBtn = styled.button`
 `;
 
 /*
-1. 가독성이 좋지 않은 예시를 만들어보자.. 
+1. 재사용이 가능한 예시를 만들어보자.. 
    1-1 반복되는 로직이 있는 경우 
-   => 보기에 많은 로직이 반복되며 가독성이 좋지 않다
-   1-2 변수나 함수의 명칭이 명확하지 않을 경우 
-   => onClick 함수일 경우 앞에 on을 붙여주거나 더 명확한 명칭으로 하도록 
+   => 보기에 많은 로직이 반복되며 재사용 컴포넌트로 만들수 있다
+  //  1-2 변수나 함수의 명칭이 명확하지 않을 경우 
+  //  => onClick 함수일 경우 앞에 on을 붙여주거나 더 명확한 명칭으로 하도록 
 */
