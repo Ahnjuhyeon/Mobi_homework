@@ -4,6 +4,7 @@ import OneUser from "./oneUser";
 
 const Page3Q = () => {
   const [mockdata, setMockdata] = useState(users);
+  const [isEditbox, setIsEditbox] = useState(false);
   //   console.log(mockdata);
   const onSubmitAdd = (e) => {
     e.preventDefault();
@@ -35,6 +36,8 @@ const Page3Q = () => {
             list={list}
             mockdata={mockdata}
             setMockdata={setMockdata}
+            isEditbox={isEditbox}
+            setIsEditbox={setIsEditbox}
           />
         ))}
       </>
@@ -42,3 +45,9 @@ const Page3Q = () => {
   );
 };
 export default Page3Q;
+/*
+불필요한 상태 (부모까지 같이 랜더링이 되지 않아도 될텐데 좋지 않은경우) 전체가 랜더링 되도록.. 
+부모 컴포넌트에서 상태를 만들고 
+프롭스로 전달해주면 ? 
+전체가 랜더링이 되니까 ... 상태가 최적화 되지 않는 상태가 된다...
+*/
