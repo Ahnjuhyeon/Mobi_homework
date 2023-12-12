@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { users } from "../../../../Mobi_1eek/src/__mock__/q1_mock";
+import { users } from "../../mock/q1_mock";
 import OneUser from "./oneUser";
 
 const Page3Q = () => {
